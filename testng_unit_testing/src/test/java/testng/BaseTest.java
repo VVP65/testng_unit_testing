@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseTest {
+public class BaseTest extends Calculator {
     public Calculator calculator;
     public Logger logger = Logger.getLogger(BaseTest.class);
 

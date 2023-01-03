@@ -11,16 +11,15 @@ public class DivisionCalculatorTest extends BaseTest {
 
     @Test(dataProvider = "divDataProviderFirstIteration", groups = "first")
     public void divFirstIteration(long firstArgument, long secondArgument, long expected) {
-        long result = calculator.div(firstArgument, secondArgument);
-        assertEquals(result, expected);
+        long actualResult = calculator.div(firstArgument, secondArgument);
+        assertEquals(actualResult, expected);
         logger.info(String.format("Current Thread no: %s - Current time: %s", Thread.currentThread().getId(), new Date(System.currentTimeMillis())));
-
     }
 
     @DataProvider(name = "divDataProviderFirstIteration")
     public Object[][] divDataProviderFirstIteration() {
         return new Object[][]{
-                {5, 2, 2},
+                {6, 2, 3},
                 {-6, -2, 3},
                 {8, -4, -2}
         };
@@ -31,7 +30,6 @@ public class DivisionCalculatorTest extends BaseTest {
         long result = calculator.div(firstArgument, secondArgument);
         assertEquals(result, expected);
         logger.info(String.format("Current Thread no: %s - Current time: %s", Thread.currentThread().getId(), new Date(System.currentTimeMillis())));
-
     }
 
     @DataProvider(name = "divDataProviderSecondIteration")
